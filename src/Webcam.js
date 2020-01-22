@@ -11,7 +11,7 @@ class Webcam extends Component {
     componentDidMount() {
         if (navigator.mediaDevices.getUserMedia) {
             var _this = this;
-            navigator.mediaDevices.getUserMedia({ video: true })
+            navigator.mediaDevices.getUserMedia({ video: { width: 1280, height: 720 } })
                 .then(function (stream) {
                     _this._v.srcObject = stream;
                 })
